@@ -1,0 +1,3 @@
+do_token="YOUR-TOKEN"
+k8s_name="YOUR-k8s-NAME"
+region="YOUR-REGION"
