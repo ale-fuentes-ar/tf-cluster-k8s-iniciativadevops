@@ -19,16 +19,16 @@ resource "digitalocean_kubernetes_cluster" "k8s_initiative" {
   node_pool {
     name       = "default"
     size       = "s-2vcpu-2gb"
-    node_count = 2
+    node_count = 3
   }
 }
 
-resource "digitalocean_kubernetes_node_pool" "node_premium" {
-  cluster_id = digitalocean_kubernetes_cluster.k8s_initiative.id
-  name       = "premium"
-  size       = "s-4vcpu-8gb"
-  node_count = 1
-}
+# resource "digitalocean_kubernetes_node_pool" "node_premium" {
+#   cluster_id = digitalocean_kubernetes_cluster.k8s_initiative.id
+#   name       = "premium"
+#   size       = "s-4vcpu-8gb"
+#   node_count = 1
+# }
 
 variable "do_token" {}
 variable "k8s_name" {}
